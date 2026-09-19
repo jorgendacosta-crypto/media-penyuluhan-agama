@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description" content="Media Penyuluhan Agama Kristen Brooggie - Kementerian Agama Kota Tual. Materi penyuluhan, renungan, kerukunan, keluarga, pemuda, ekoteologi dan literasi digital.">
@@ -13,11 +11,10 @@
 
 <title>Media Penyuluhan Agama Kristen | Brooggie</title>
 
-
 <style>
 
 /* =========================
-   DASAR WEBSITE
+   DASAR
 ========================= */
 
 :root{
@@ -29,7 +26,6 @@
     --dark:#1f2937;
     --muted:#6b7280;
     --border:#eadfce;
-    --success:#16803c;
 }
 
 *{
@@ -51,7 +47,7 @@ body{
 
 
 /* =========================
-   HEADER
+   MENU / NAVIGASI
 ========================= */
 
 header{
@@ -98,26 +94,58 @@ nav{
 
 
 /* =========================
-   BANNER FOTO
+   HEADER FOTO
 ========================= */
 
-.banner-img{
-    width:90%;
+.site-header-image{
+    width:100%;
     max-width:1150px;
-    display:block;
-    margin:40px auto -30px auto;
-    border-radius:16px;
-    box-shadow:0 10px 30px #5b2c0615;
+    height:360px;
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+    background:#5b2c06;
 }
 
-@media(max-width:800px){
+.site-header-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
 
-    .banner-img{
-        width:100%;
-        border-radius:0;
-        margin:0 auto -20px auto;
-    }
+.header-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(0,0,0,.10),
+        rgba(0,0,0,.60)
+    );
 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:25px;
+}
+
+.header-overlay-content{
+    color:white;
+    max-width:850px;
+}
+
+.header-overlay h2{
+    color:white;
+    font-size:clamp(1.8rem,4vw,3.2rem);
+    margin-bottom:8px;
+    text-shadow:0 2px 8px rgba(0,0,0,.6);
+}
+
+.header-overlay p{
+    color:white;
+    font-size:1.05rem;
+    margin:0;
+    text-shadow:0 2px 6px rgba(0,0,0,.6);
 }
 
 
@@ -128,7 +156,7 @@ nav{
 .hero{
     max-width:1150px;
     margin:auto;
-    padding:80px 6% 70px;
+    padding:70px 6%;
     display:grid;
     grid-template-columns:1.25fr .75fr;
     gap:40px;
@@ -247,7 +275,7 @@ h2{
 
 
 /* =========================
-   CARD
+   CARD MATERI
 ========================= */
 
 .grid{
@@ -472,7 +500,7 @@ footer strong{
 
 
 /* =========================
-   MOBILE
+   RESPONSIVE
 ========================= */
 
 @media(max-width:850px){
@@ -495,7 +523,12 @@ footer strong{
         gap:12px;
     }
 
+    .site-header-image{
+        height:300px;
+    }
+
 }
+
 
 @media(max-width:600px){
 
@@ -511,6 +544,22 @@ footer strong{
 
     .navlinks a{
         font-size:.88rem;
+    }
+
+    .site-header-image{
+        height:230px;
+    }
+
+    .header-overlay{
+        padding:15px;
+    }
+
+    .header-overlay h2{
+        font-size:1.65rem;
+    }
+
+    .header-overlay p{
+        font-size:.9rem;
     }
 
     h1{
@@ -546,7 +595,7 @@ footer strong{
 
 
 <!-- =========================
-     MENU HEADER
+     MENU
 ========================= -->
 
 <header>
@@ -576,18 +625,37 @@ footer strong{
 </header>
 
 
-<main>
-
-
 <!-- =========================
-     BANNER FOTO
+     HEADER FOTO
 ========================= -->
+
+<div class="site-header-image">
 
 <img
 src="banner-jorgen.png"
 alt="Banner Jorgen Brayn da Costa"
-class="banner-img"
 >
+
+<div class="header-overlay">
+
+<div class="header-overlay-content">
+
+<h2>
+Media Penyuluhan Agama Kristen
+</h2>
+
+<p>
+Penyuluh Agama Kristen • Kementerian Agama Kota Tual
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<main>
 
 
 <!-- =========================
@@ -638,11 +706,1235 @@ Yohanes 15:12
 </div>
 
 </section>
-<!-- MATERI -->
+
+
+<!-- =========================
+     MATERI
+========================= -->
+
 <section id="materi">
-    </body>
+
+<h2>
+Materi Penyuluhan
+</h2>
+
+<p class="intro">
+Temukan materi penyuluhan tentang iman, keluarga, pemuda,
+kerukunan, lingkungan dan literasi digital.
+</p>
+
+
+<div class="search">
+
+<input
+type="text"
+id="search"
+placeholder="🔎 Cari materi..."
+>
+
+</div>
+
+
+<div class="grid" id="cards">
+
+
+<!-- MATERI 1 -->
+
+<article
+class="card"
+data-key="kerukunan toleransi damai antaragama dialog"
+>
+
+<span class="tag">
+Kerukunan
+</span>
+
+<h3>
+Memahami Kerukunan Umat Beragama
+</h3>
+
+<p>
+Memahami pentingnya toleransi, dialog antariman,
+dan kerja sama dalam menjaga kehidupan masyarakat yang damai.
+</p>
+
+<a
+class="read-more"
+onclick="openArticle('kerukunan')"
+>
+Baca Selengkapnya →
+</a>
+
+</article>
+
+
+<!-- MATERI 2 -->
+
+<article
+class="card"
+data-key="keluarga kristen parenting harmonis"
+>
+
+<span class="tag">
+Keluarga
+</span>
+
+<h3>
+Membangun Keluarga Kristen yang Harmonis
+</h3>
+
+<p>
+Keluarga sebagai tempat pertama untuk belajar kasih,
+pengampunan, tanggung jawab dan kehidupan iman.
+</p>
+
+<a
+class="read-more"
+onclick="openArticle('keluarga')"
+>
+Baca Selengkapnya →
+</a>
+
+</article>
+
+
+<!-- MATERI 3 -->
+
+<article
+class="card"
+data-key="pemuda remaja ews konflik"
+>
+
+<span class="tag">
+Pemuda
+</span>
+
+<h3>
+Pemuda dan Sistem Peringatan Dini
+</h3>
+
+<p>
+Mengenali tanda-tanda konflik sosial berdimensi keagamaan
+dan membangun respons yang damai.
+</p>
+
+<a
+class="read-more"
+onclick="openArticle('ews')"
+>
+Baca Selengkapnya →
+</a>
+
+</article>
+
+
+<!-- MATERI 4 -->
+
+<article
+class="card"
+data-key="firman iman badai kekuatan kasih"
+>
+
+<span class="tag">
+Renungan
+</span>
+
+<h3>
+Tetap Berdiri dalam Iman
+</h3>
+
+<p>
+Belajar menghadapi tekanan hidup dengan iman,
+keberanian, kekuatan dan kasih.
+</p>
+
+<a
+class="read-more"
+onclick="openArticle('iman')"
+>
+Baca Selengkapnya →
+</a>
+
+</article>
+
+
+<!-- MATERI 5 -->
+
+<article
+class="card"
+data-key="ekoteologi lingkungan ciptaan alam"
+>
+
+<span class="tag">
+Ekoteologi
+</span>
+
+<h3>
+Iman dan Kepedulian Lingkungan
+</h3>
+
+<p>
+Kepedulian terhadap lingkungan sebagai bagian
+dari tanggung jawab iman kepada Tuhan dan ciptaan.
+</p>
+
+<a
+class="read-more"
+onclick="openArticle('ekoteologi')"
+>
+Baca Selengkapnya →
+</a>
+
+</article>
+
+
+<!-- MATERI 6 -->
+
+<article
+class="card"
+data-key="media sosial digital etika hoaks informasi"
+>
+
+<span class="tag">
+Literasi Digital
+</span>
+
+<h3>
+Etika Bermedia Sosial
+</h3>
+
+<p>
+Menggunakan media digital untuk menyebarkan informasi
+yang benar, membangun dan penuh kasih.
+</p>
+
+<a
+class="read-more"
+onclick="openArticle('digital')"
+>
+Baca Selengkapnya →
+</a>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ARTIKEL
+========================= -->
+
+<section id="artikelView">
+
+<div class="article-container">
+
+<a
+class="back-link"
+onclick="closeArticle()"
+>
+← Kembali ke Materi
+</a>
+
+<div id="articleContent"></div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     RENUNGAN
+========================= -->
+
+<section id="renungan">
+
+<h2>
+Renungan Singkat
+</h2>
+
+<div class="verse">
+
+<h3>
+Respon yang Membangun
+</h3>
+
+<p>
+Dalam kehidupan, kita tidak selalu dapat mengatur apa yang terjadi,
+tetapi kita dapat belajar mengatur respons kita.
+Iman mendorong kita untuk tidak membalas keburukan dengan keburukan,
+melainkan menghadirkan kasih, pengampunan dan tindakan yang membangun.
+</p>
+
+<strong>
+“Lakukanlah segala pekerjaanmu dalam kasih.”
+— 1 Korintus 16:14
+</strong>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROFIL
+========================= -->
+
+<section id="profil">
+
+<h2>
+Tentang Penyuluh
+</h2>
+
+<div class="profile">
+
+<h3>
+Media Penyuluhan Agama Kristen Brooggie
+</h3>
+
+<p>
+Media digital ini dikembangkan sebagai sarana penyuluhan agama
+untuk membantu masyarakat memperoleh informasi, materi pembinaan,
+renungan, edukasi kerukunan, serta bahan pembelajaran keagamaan
+yang relevan dengan kehidupan sehari-hari.
+</p>
+
+<br>
+
+<p>
+
+<strong>
+Penyuluh Agama Kristen
+</strong>
+
+<br>
+
+Kementerian Agama Kota Tual
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     KONSULTASI
+========================= -->
+
+<section id="konsultasi">
+
+<h2>
+Konsultasi / Pertanyaan
+</h2>
+
+<p class="intro">
+Silakan tuliskan nama dan pertanyaan Anda.
+Pesan akan diarahkan ke WhatsApp.
+</p>
+
+
+<form
+class="form"
+onsubmit="sendQuestion(event)"
+>
+
+<label for="nama">
+Nama
+</label>
+
+<input
+id="nama"
+type="text"
+placeholder="Masukkan nama Anda"
+required
+>
+
+
+<label for="pertanyaan">
+Pertanyaan
+</label>
+
+<textarea
+id="pertanyaan"
+placeholder="Tuliskan pertanyaan Anda..."
+required
+></textarea>
+
+
+<button
+class="btn"
+type="submit"
+>
+💬 Kirim melalui WhatsApp
+</button>
+
+</form>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<strong>
+Media Penyuluhan Agama Kristen Brooggie
+</strong>
+
+<br>
+
+Penyuluh Agama Kristen • Kementerian Agama Kota Tual
+
+<br><br>
+
+© <span id="year"></span> Brooggie
+
+</footer>
+
+
+<script>
+
+/* =========================
+   TAHUN
+========================= */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+/* =========================
+   PENCARIAN
+========================= */
+
+document
+.getElementById("search")
+.addEventListener("input",function(){
+
+const q =
+this.value.toLowerCase().trim();
+
+document
+.querySelectorAll("#cards .card")
+.forEach(function(card){
+
+const text =
+(
+card.innerText +
+" " +
+card.dataset.key
+).toLowerCase();
+
+card.style.display =
+text.includes(q) ? "" : "none";
+
+});
+
+});
+
+
+/* =========================
+   DATA ARTIKEL
+========================= */
+
+const articles = {
+
+kerukunan: `
+
+<span class="tag">
+Kerukunan
+</span>
+
+<h1>
+Memahami Kerukunan Umat Beragama
+</h1>
+
+<div class="article-meta">
+
+<strong>Oleh:</strong>
+Jorgen Brayn da Costa (Penyuluh Agama)
+
+<br>
+
+<strong>Tanggal:</strong>
+19 September 2026
+
+</div>
+
+<div class="article-content">
+
+<p>
+Kerukunan umat beragama merupakan salah satu unsur penting
+dalam membangun kehidupan masyarakat yang damai.
+Kerukunan tidak berarti menghilangkan perbedaan keyakinan,
+melainkan membangun sikap saling menghormati dan bekerja sama
+dalam kehidupan bersama.
+</p>
+
+<div class="highlight-box">
+
+<strong>
+Dalam materi ini, Anda akan mempelajari:
+</strong>
+
+<ul>
+
+<li>
+Konsep Tri Kerukunan Umat Beragama.
+</li>
+
+<li>
+Dialog antariman dan bentuk-bentuknya.
+</li>
+
+<li>
+Nilai kehidupan bersama dalam masyarakat yang plural.
+</li>
+
+<li>
+Contoh praktik toleransi dalam kehidupan masyarakat.
+</li>
+
+</ul>
+
+</div>
+
+<h2>
+Tri Kerukunan Umat Beragama
+</h2>
+
+<p>
+Tri Kerukunan Umat Beragama dapat digunakan sebagai kerangka
+untuk memahami hubungan yang harmonis dalam kehidupan keagamaan
+di Indonesia.
+</p>
+
+<ol>
+
+<li>
+
+<strong>
+Kerukunan Intern Umat Beragama
+</strong>
+
+<p>
+Kerukunan yang dibangun di antara orang-orang yang memiliki
+agama atau keyakinan yang sama, termasuk dalam menghadapi
+perbedaan pemahaman dan organisasi keagamaan.
+</p>
+
+</li>
+
+<li>
+
+<strong>
+Kerukunan Antarumat Beragama
+</strong>
+
+<p>
+Hubungan yang harmonis antara umat yang berbeda agama,
+dengan mengedepankan sikap saling menghormati,
+menghargai dan bekerja sama dalam kehidupan sosial.
+</p>
+
+</li>
+
+<li>
+
+<strong>
+Kerukunan Umat Beragama dengan Pemerintah
+</strong>
+
+<p>
+Hubungan yang baik antara kehidupan umat beragama
+dengan pemerintah dalam rangka menciptakan kehidupan
+masyarakat yang aman, tertib dan menghargai hak setiap warga.
+</p>
+
+</li>
+
+</ol>
+
+<h2>
+Dialog Antariman
+</h2>
+
+<p>
+Dialog antariman tidak selalu harus berbentuk diskusi formal.
+Dialog dapat terjadi melalui kehidupan sehari-hari dan kerja sama
+di tengah masyarakat.
+</p>
+
+<ul>
+
+<li>
+<strong>Dialog Kehidupan</strong>
+<br>
+Interaksi sehari-hari seperti saling menyapa,
+bertetangga dan bergotong royong.
+</li>
+
+<li>
+<strong>Dialog Pemahaman</strong>
+<br>
+Upaya memahami keyakinan dan tradisi orang lain
+dengan sikap terbuka dan saling menghormati.
+</li>
+
+<li>
+<strong>Dialog Aksi Bersama</strong>
+<br>
+Kerja sama lintas agama dalam kegiatan sosial,
+kemanusiaan, lingkungan dan penanggulangan bencana.
+</li>
+
+</ul>
+
+<h2>
+Kerukunan dalam Kehidupan Masyarakat
+</h2>
+
+<p>
+Kerukunan dapat diwujudkan melalui tindakan sederhana.
+Misalnya, saling menghormati ketika tetangga melaksanakan
+ibadah, membantu dalam kegiatan sosial, menjaga komunikasi,
+serta menghindari penyebaran informasi yang dapat menimbulkan
+prasangka terhadap kelompok agama tertentu.
+</p>
+
+<div class="quote-box">
+
+“Kerukunan bukan berarti kita harus menjadi sama,
+tetapi bagaimana kita dapat hidup bersama dalam perbedaan
+dengan saling menghormati.”
+
+</div>
+
+<h2>
+Praktik Toleransi
+</h2>
+
+<ul>
+
+<li>
+Menghormati hari raya dan kegiatan keagamaan orang lain.
+</li>
+
+<li>
+Menjaga ucapan ketika membicarakan agama dan keyakinan orang lain.
+</li>
+
+<li>
+Tidak memaksakan keyakinan kepada orang lain.
+</li>
+
+<li>
+Bekerja sama dalam kegiatan sosial kemasyarakatan.
+</li>
+
+<li>
+Tidak menyebarkan berita atau informasi yang belum terverifikasi.
+</li>
+
+<li>
+Menyelesaikan perbedaan melalui komunikasi dan dialog.
+</li>
+
+</ul>
+
+<h2>
+Penutup
+</h2>
+
+<p>
+Kerukunan dimulai dari sikap setiap pribadi.
+Keluarga, pemuda, tokoh agama dan masyarakat memiliki
+peran penting dalam membangun lingkungan yang damai.
+</p>
+
+<p>
+Sebagai umat beragama, kita dapat menjalankan keyakinan
+masing-masing sekaligus membangun hubungan sosial yang baik
+dengan sesama.
+</p>
+
+</div>
+`,
+
+keluarga: `
+
+<span class="tag">
+Keluarga
+</span>
+
+<h1>
+Membangun Keluarga Kristen yang Harmonis
+</h1>
+
+<div class="article-meta">
+
+<strong>Oleh:</strong>
+Jorgen Brayn da Costa (Penyuluh Agama)
+
+<br>
+
+<strong>Kategori:</strong>
+Keluarga Kristen
+
+</div>
+
+<div class="article-content">
+
+<p>
+Keluarga merupakan tempat pertama seseorang belajar tentang
+kasih, pengampunan, tanggung jawab, komunikasi dan kehidupan iman.
+Karena itu, membangun keluarga yang harmonis bukan hanya
+berhubungan dengan keadaan ekonomi, tetapi juga dengan kualitas
+hubungan antaranggota keluarga.
+</p>
+
+<div class="highlight-box">
+
+<strong>
+Empat dasar keluarga yang sehat:
+</strong>
+
+<ul>
+
+<li>Kasih</li>
+<li>Komunikasi</li>
+<li>Pengampunan</li>
+<li>Keteladanan</li>
+
+</ul>
+
+</div>
+
+<h2>
+Kasih sebagai Dasar Keluarga
+</h2>
+
+<p>
+Kasih menjadi dasar utama dalam kehidupan keluarga Kristen.
+Kasih bukan hanya perkataan, tetapi diwujudkan melalui perhatian,
+pengorbanan, kesediaan mendengar dan kepedulian terhadap anggota
+keluarga.
+</p>
+
+<h2>
+Komunikasi dalam Keluarga
+</h2>
+
+<p>
+Banyak masalah keluarga dapat berkembang karena komunikasi
+yang tidak berjalan dengan baik. Karena itu, anggota keluarga
+perlu belajar berbicara dengan jujur, mendengarkan dengan baik,
+dan menghindari kata-kata yang melukai.
+</p>
+
+<h2>
+Pengampunan
+</h2>
+
+<p>
+Tidak ada keluarga yang sempurna. Kesalahan dan perbedaan
+dapat terjadi. Pengampunan membantu keluarga untuk tidak terus
+hidup dalam luka masa lalu.
+</p>
+
+<div class="quote-box">
+
+“Dan di atas semuanya itu: kenakanlah kasih,
+sebagai pengikat yang mempersatukan dan menyempurnakan.”
+— Kolose 3:14
+
+</div>
+
+<h2>
+Penutup
+</h2>
+
+<p>
+Keluarga yang harmonis dibangun setiap hari melalui tindakan
+sederhana: mendengar, menghargai, mengampuni, berdoa bersama
+dan memberikan teladan yang baik.
+</p>
+
+</div>
+`,
+
+ews: `
+
+<span class="tag">
+Pemuda
+</span>
+
+<h1>
+Pemuda dan Sistem Peringatan Dini Konflik Sosial
+</h1>
+
+<div class="article-meta">
+
+<strong>Oleh:</strong>
+Jorgen Brayn da Costa (Penyuluh Agama)
+
+<br>
+
+<strong>Kategori:</strong>
+Pemuda dan Kerukunan
+
+</div>
+
+<div class="article-content">
+
+<p>
+Pemuda memiliki posisi penting dalam menjaga kerukunan masyarakat.
+Di tengah perkembangan media sosial, pemuda dapat menjadi bagian
+dari penyebaran informasi positif sekaligus perlu memiliki
+kemampuan mengenali informasi yang dapat memicu konflik.
+</p>
+
+<h2>
+Apa Itu Sistem Peringatan Dini?
+</h2>
+
+<p>
+Sistem Peringatan Dini merupakan upaya mengenali gejala,
+perubahan atau tanda-tanda yang berpotensi berkembang menjadi
+konflik sehingga dapat dilakukan langkah pencegahan lebih awal.
+</p>
+
+<h2>
+Tanda yang Perlu Diperhatikan
+</h2>
+
+<ul>
+
+<li>Munculnya provokasi terhadap kelompok tertentu.</li>
+
+<li>Penyebaran informasi yang belum terverifikasi.</li>
+
+<li>Meningkatnya ujaran kebencian.</li>
+
+<li>Munculnya konflik antar kelompok.</li>
+
+<li>Ajakan melakukan tindakan kekerasan.</li>
+
+</ul>
+
+<h2>
+Peran Pemuda
+</h2>
+
+<ul>
+
+<li>
+Memeriksa kebenaran informasi sebelum membagikannya.
+</li>
+
+<li>
+Tidak mudah terpancing provokasi.
+</li>
+
+<li>
+Membangun komunikasi lintas kelompok.
+</li>
+
+<li>
+Menyampaikan informasi kepada pihak yang tepat ketika
+menemukan tanda konflik.
+</li>
+
+<li>
+Menggunakan media sosial untuk menyebarkan pesan damai.
+</li>
+
+</ul>
+
+<div class="quote-box">
+
+“Berbahagialah orang yang membawa damai,
+karena mereka akan disebut anak-anak Allah.”
+— Matius 5:9
+
+</div>
+
+</div>
+`,
+
+iman: `
+
+<span class="tag">
+Renungan
+</span>
+
+<h1>
+Tetap Berdiri dalam Iman di Tengah Badai
+</h1>
+
+<div class="article-meta">
+
+<strong>Oleh:</strong>
+Jorgen Brayn da Costa
+
+<br>
+
+<strong>Ayat:</strong>
+1 Korintus 16:13–14
+
+</div>
+
+<div class="article-content">
+
+<p>
+Kehidupan tidak selalu berjalan sesuai dengan harapan.
+Ada masa ketika seseorang menghadapi masalah keluarga,
+tekanan pekerjaan, persoalan ekonomi atau pergumulan pribadi.
+Dalam keadaan seperti itu, iman mengajarkan kita untuk tetap
+berdiri dan memberikan respons yang benar.
+</p>
+
+<h2>
+Berjaga-jagalah
+</h2>
+
+<p>
+Berjaga-jaga berarti memiliki kepekaan terhadap keadaan
+dan tidak hidup tanpa pertimbangan. Orang percaya dipanggil
+untuk tetap sadar terhadap tantangan kehidupan dan menjaga
+kehidupan imannya.
+</p>
+
+<h2>
+Berdirilah dalam Iman
+</h2>
+
+<p>
+Iman memberikan dasar untuk tetap bertahan ketika keadaan
+tidak mudah. Berdiri dalam iman bukan berarti tidak memiliki
+masalah, tetapi memilih untuk tetap percaya kepada Tuhan
+di tengah masalah.
+</p>
+
+<h2>
+Lakukanlah Segala Sesuatu dalam Kasih
+</h2>
+
+<p>
+Kekuatan iman tidak hanya terlihat dari keberanian,
+tetapi juga dari cara kita memperlakukan orang lain.
+Karena itu, Paulus menghubungkan iman dengan kasih.
+</p>
+
+<div class="quote-box">
+
+“Berjaga-jagalah! Berdirilah teguh dalam iman!
+Bersikaplah sebagai laki-laki! Tetap kuat!
+Lakukanlah segala pekerjaanmu dalam kasih.”
+— 1 Korintus 16:13–14
+
+</div>
+
+</div>
+`,
+
+ekoteologi: `
+
+<span class="tag">
+Ekoteologi
+</span>
+
+<h1>
+Iman dan Kepedulian terhadap Lingkungan
+</h1>
+
+<div class="article-meta">
+
+<strong>Oleh:</strong>
+Jorgen Brayn da Costa
+
+<br>
+
+<strong>Kategori:</strong>
+Ekoteologi
+
+</div>
+
+<div class="article-content">
+
+<p>
+Lingkungan merupakan bagian penting dalam kehidupan manusia.
+Air, tanah, laut, hutan, hewan dan tumbuhan merupakan bagian
+dari ciptaan Tuhan yang perlu dijaga.
+</p>
+
+<h2>
+Manusia sebagai Penatalayan
+</h2>
+
+<p>
+Kejadian 2:15 menggambarkan manusia ditempatkan di taman Eden
+untuk mengusahakan dan memeliharanya. Prinsip ini dapat menjadi
+dasar bagi tanggung jawab manusia dalam menjaga lingkungan.
+</p>
+
+<h2>
+Iman yang Peduli Lingkungan
+</h2>
+
+<p>
+Kepedulian lingkungan dapat diwujudkan melalui tindakan sederhana:
+mengurangi sampah, menjaga kebersihan, menanam pohon,
+menghemat air dan menggunakan sumber daya secara bertanggung jawab.
+</p>
+
+<h2>
+Dari Gereja kepada Masyarakat
+</h2>
+
+<p>
+Gereja dan komunitas keagamaan dapat mengambil bagian dalam
+edukasi lingkungan melalui kegiatan penghijauan, kerja bakti,
+pengelolaan sampah dan pendidikan lingkungan bagi generasi muda.
+</p>
+
+<div class="quote-box">
+
+“Tuhan Allah mengambil manusia itu dan menempatkannya
+dalam taman Eden untuk mengusahakan dan memelihara taman itu.”
+— Kejadian 2:15
+
+</div>
+
+</div>
+`,
+
+digital: `
+
+<span class="tag">
+Literasi Digital
+</span>
+
+<h1>
+Etika Bermedia Sosial
+</h1>
+
+<div class="article-meta">
+
+<strong>Oleh:</strong>
+Jorgen Brayn da Costa
+
+<br>
+
+<strong>Kategori:</strong>
+Literasi Digital
+
+</div>
+
+<div class="article-content">
+
+<p>
+Media sosial telah menjadi bagian dari kehidupan sehari-hari.
+Karena itu, penggunaan media digital perlu disertai dengan
+tanggung jawab dan etika.
+</p>
+
+<h2>
+Berpikir Sebelum Membagikan
+</h2>
+
+<p>
+Tidak semua informasi yang kita terima benar.
+Sebelum membagikan sebuah berita, periksa sumber,
+tanggal, konteks dan kebenaran informasinya.
+</p>
+
+<h2>
+Hindari Ujaran yang Melukai
+</h2>
+
+<p>
+Perbedaan pendapat tidak harus berubah menjadi permusuhan.
+Gunakan bahasa yang sopan dan hindari penghinaan,
+provokasi serta penyebaran kebencian.
+</p>
+
+<h2>
+Gunakan Media Sosial untuk Kebaikan
+</h2>
+
+<ul>
+
+<li>Bagikan informasi yang bermanfaat.</li>
+
+<li>Sebarkan pesan perdamaian.</li>
+
+<li>Bagikan kegiatan sosial yang positif.</li>
+
+<li>Gunakan media digital untuk pendidikan.</li>
+
+<li>Hormati privasi orang lain.</li>
+
+</ul>
+
+<div class="quote-box">
+
+“Hendaklah perkataanmu senantiasa penuh kasih,
+jangan hambar.”
+— Kolose 4:6
+
+</div>
+
+</div>
+
+`
+
+};
+
+
+/* =========================
+   BUKA ARTIKEL
+========================= */
+
+function openArticle(name){
+
+const content =
+articles[name];
+
+if(!content){
+return;
+}
+
+document
+.getElementById("articleContent")
+.innerHTML = content;
+
+document
+.getElementById("artikelView")
+.style.display = "block";
+
+document
+.getElementById("materi")
+.style.display = "none";
+
+document
+.getElementById("renungan")
+.style.display = "none";
+
+document
+.getElementById("profil")
+.style.display = "none";
+
+document
+.getElementById("konsultasi")
+.style.display = "none";
+
+document
+.getElementById("artikelView")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+/* =========================
+   TUTUP ARTIKEL
+========================= */
+
+function closeArticle(){
+
+document
+.getElementById("artikelView")
+.style.display = "none";
+
+document
+.getElementById("materi")
+.style.display = "block";
+
+document
+.getElementById("renungan")
+.style.display = "block";
+
+document
+.getElementById("profil")
+.style.display = "block";
+
+document
+.getElementById("konsultasi")
+.style.display = "block";
+
+document
+.getElementById("materi")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+function sendQuestion(event){
+
+event.preventDefault();
+
+const nama =
+document
+.getElementById("nama")
+.value
+.trim();
+
+const pertanyaan =
+document
+.getElementById("pertanyaan")
+.value
+.trim();
+
+
+/*
+=====================================
+NOMOR WHATSAPP
+=====================================
+*/
+
+const nomorWhatsApp =
+"6281344152010";
+
+
+const pesan =
+`Shalom, saya ${nama}.
+
+Saya ingin bertanya melalui Media Penyuluhan Agama Kristen Brooggie.
+
+Pertanyaan:
+${pertanyaan}`;
+
+
+const url =
+"https://wa.me/" +
+nomorWhatsApp +
+"?text=" +
+encodeURIComponent(pesan);
+
+
+window.open(
+url,
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
 </html>
-    src="banner-jorgen.png"
-    <img src="foto/banner-jorgen.png"
-     alt="Banner Jorgen Brayn da Costa"
-     class="banner-img">
