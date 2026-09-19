@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description" content="Media Penyuluhan Agama Kristen Brooggie - Kementerian Agama Kota Tual. Materi penyuluhan, renungan, kerukunan, keluarga, pemuda, ekoteologi dan literasi digital.">
@@ -11,10 +13,11 @@
 
 <title>Media Penyuluhan Agama Kristen | Brooggie</title>
 
+
 <style>
 
 /* =========================
-   DASAR
+   DASAR WEBSITE
 ========================= */
 
 :root{
@@ -47,7 +50,7 @@ body{
 
 
 /* =========================
-   MENU / NAVIGASI
+   NAVIGASI
 ========================= */
 
 header{
@@ -94,58 +97,22 @@ nav{
 
 
 /* =========================
-   HEADER FOTO
+   FOTO HEADER
 ========================= */
 
 .site-header-image{
     width:100%;
-    max-width:1150px;
-    height:360px;
-    margin:0 auto;
-    position:relative;
+    background:#241507;
     overflow:hidden;
-    background:#5b2c06;
 }
 
 .site-header-image img{
     width:100%;
-    height:100%;
+    height:auto;
+    max-height:520px;
     object-fit:cover;
+    object-position:center;
     display:block;
-}
-
-.header-overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        rgba(0,0,0,.10),
-        rgba(0,0,0,.60)
-    );
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:25px;
-}
-
-.header-overlay-content{
-    color:white;
-    max-width:850px;
-}
-
-.header-overlay h2{
-    color:white;
-    font-size:clamp(1.8rem,4vw,3.2rem);
-    margin-bottom:8px;
-    text-shadow:0 2px 8px rgba(0,0,0,.6);
-}
-
-.header-overlay p{
-    color:white;
-    font-size:1.05rem;
-    margin:0;
-    text-shadow:0 2px 6px rgba(0,0,0,.6);
 }
 
 
@@ -156,7 +123,7 @@ nav{
 .hero{
     max-width:1150px;
     margin:auto;
-    padding:70px 6%;
+    padding:80px 6% 70px;
     display:grid;
     grid-template-columns:1.25fr .75fr;
     gap:40px;
@@ -250,7 +217,7 @@ h2{
 
 
 /* =========================
-   SEARCH
+   PENCARIAN
 ========================= */
 
 .search{
@@ -275,7 +242,7 @@ h2{
 
 
 /* =========================
-   CARD MATERI
+   KARTU MATERI
 ========================= */
 
 .grid{
@@ -523,8 +490,8 @@ footer strong{
         gap:12px;
     }
 
-    .site-header-image{
-        height:300px;
+    .site-header-image img{
+        max-height:400px;
     }
 
 }
@@ -544,22 +511,6 @@ footer strong{
 
     .navlinks a{
         font-size:.88rem;
-    }
-
-    .site-header-image{
-        height:230px;
-    }
-
-    .header-overlay{
-        padding:15px;
-    }
-
-    .header-overlay h2{
-        font-size:1.65rem;
-    }
-
-    .header-overlay p{
-        font-size:.9rem;
     }
 
     h1{
@@ -584,6 +535,10 @@ footer strong{
         font-size:1rem;
     }
 
+    .site-header-image img{
+        max-height:300px;
+    }
+
 }
 
 </style>
@@ -595,7 +550,7 @@ footer strong{
 
 
 <!-- =========================
-     MENU
+     NAVIGASI
 ========================= -->
 
 <header>
@@ -608,15 +563,25 @@ footer strong{
 
 <div class="navlinks">
 
-<a href="#beranda">Beranda</a>
+<a href="#beranda">
+Beranda
+</a>
 
-<a href="#materi">Materi</a>
+<a href="#materi">
+Materi
+</a>
 
-<a href="#renungan">Renungan</a>
+<a href="#renungan">
+Renungan
+</a>
 
-<a href="#profil">Profil</a>
+<a href="#profil">
+Profil
+</a>
 
-<a href="#konsultasi">Konsultasi</a>
+<a href="#konsultasi">
+Konsultasi
+</a>
 
 </div>
 
@@ -632,25 +597,9 @@ footer strong{
 <div class="site-header-image">
 
 <img
-src="banner-jorgen.png"
-alt="Banner Jorgen Brayn da Costa"
+src="header.png"
+alt="Header Media Penyuluhan Agama Kristen Brooggie"
 >
-
-<div class="header-overlay">
-
-<div class="header-overlay-content">
-
-<h2>
-Media Penyuluhan Agama Kristen
-</h2>
-
-<p>
-Penyuluh Agama Kristen • Kementerian Agama Kota Tual
-</p>
-
-</div>
-
-</div>
 
 </div>
 
@@ -938,7 +887,10 @@ onclick="closeArticle()"
 ← Kembali ke Materi
 </a>
 
-<div id="articleContent"></div>
+
+<div id="articleContent">
+
+</div>
 
 </div>
 
@@ -1102,16 +1054,18 @@ Penyuluh Agama Kristen • Kementerian Agama Kota Tual
 
 <script>
 
+
 /* =========================
-   TAHUN
+   TAHUN OTOMATIS
 ========================= */
 
 document.getElementById("year").textContent =
 new Date().getFullYear();
 
 
+
 /* =========================
-   PENCARIAN
+   PENCARIAN MATERI
 ========================= */
 
 document
@@ -1140,11 +1094,13 @@ text.includes(q) ? "" : "none";
 });
 
 
+
 /* =========================
    DATA ARTIKEL
 ========================= */
 
 const articles = {
+
 
 kerukunan: `
 
@@ -1206,6 +1162,7 @@ Contoh praktik toleransi dalam kehidupan masyarakat.
 
 </div>
 
+
 <h2>
 Tri Kerukunan Umat Beragama
 </h2>
@@ -1262,6 +1219,7 @@ masyarakat yang aman, tertib dan menghargai hak setiap warga.
 
 </ol>
 
+
 <h2>
 Dialog Antariman
 </h2>
@@ -1297,6 +1255,7 @@ kemanusiaan, lingkungan dan penanggulangan bencana.
 
 </ul>
 
+
 <h2>
 Kerukunan dalam Kehidupan Masyarakat
 </h2>
@@ -1309,6 +1268,7 @@ serta menghindari penyebaran informasi yang dapat menimbulkan
 prasangka terhadap kelompok agama tertentu.
 </p>
 
+
 <div class="quote-box">
 
 “Kerukunan bukan berarti kita harus menjadi sama,
@@ -1316,6 +1276,7 @@ tetapi bagaimana kita dapat hidup bersama dalam perbedaan
 dengan saling menghormati.”
 
 </div>
+
 
 <h2>
 Praktik Toleransi
@@ -1349,6 +1310,7 @@ Menyelesaikan perbedaan melalui komunikasi dan dialog.
 
 </ul>
 
+
 <h2>
 Penutup
 </h2>
@@ -1367,6 +1329,7 @@ dengan sesama.
 
 </div>
 `,
+
 
 keluarga: `
 
@@ -1417,6 +1380,7 @@ Empat dasar keluarga yang sehat:
 
 </div>
 
+
 <h2>
 Kasih sebagai Dasar Keluarga
 </h2>
@@ -1427,6 +1391,7 @@ Kasih bukan hanya perkataan, tetapi diwujudkan melalui perhatian,
 pengorbanan, kesediaan mendengar dan kepedulian terhadap anggota
 keluarga.
 </p>
+
 
 <h2>
 Komunikasi dalam Keluarga
@@ -1439,6 +1404,7 @@ perlu belajar berbicara dengan jujur, mendengarkan dengan baik,
 dan menghindari kata-kata yang melukai.
 </p>
 
+
 <h2>
 Pengampunan
 </h2>
@@ -1449,6 +1415,7 @@ dapat terjadi. Pengampunan membantu keluarga untuk tidak terus
 hidup dalam luka masa lalu.
 </p>
 
+
 <div class="quote-box">
 
 “Dan di atas semuanya itu: kenakanlah kasih,
@@ -1456,6 +1423,7 @@ sebagai pengikat yang mempersatukan dan menyempurnakan.”
 — Kolose 3:14
 
 </div>
+
 
 <h2>
 Penutup
@@ -1469,6 +1437,7 @@ dan memberikan teladan yang baik.
 
 </div>
 `,
+
 
 ews: `
 
@@ -1501,6 +1470,7 @@ dari penyebaran informasi positif sekaligus perlu memiliki
 kemampuan mengenali informasi yang dapat memicu konflik.
 </p>
 
+
 <h2>
 Apa Itu Sistem Peringatan Dini?
 </h2>
@@ -1511,23 +1481,35 @@ perubahan atau tanda-tanda yang berpotensi berkembang menjadi
 konflik sehingga dapat dilakukan langkah pencegahan lebih awal.
 </p>
 
+
 <h2>
 Tanda yang Perlu Diperhatikan
 </h2>
 
 <ul>
 
-<li>Munculnya provokasi terhadap kelompok tertentu.</li>
+<li>
+Munculnya provokasi terhadap kelompok tertentu.
+</li>
 
-<li>Penyebaran informasi yang belum terverifikasi.</li>
+<li>
+Penyebaran informasi yang belum terverifikasi.
+</li>
 
-<li>Meningkatnya ujaran kebencian.</li>
+<li>
+Meningkatnya ujaran kebencian.
+</li>
 
-<li>Munculnya konflik antar kelompok.</li>
+<li>
+Munculnya konflik antar kelompok.
+</li>
 
-<li>Ajakan melakukan tindakan kekerasan.</li>
+<li>
+Ajakan melakukan tindakan kekerasan.
+</li>
 
 </ul>
+
 
 <h2>
 Peran Pemuda
@@ -1558,6 +1540,7 @@ Menggunakan media sosial untuk menyebarkan pesan damai.
 
 </ul>
 
+
 <div class="quote-box">
 
 “Berbahagialah orang yang membawa damai,
@@ -1568,6 +1551,7 @@ karena mereka akan disebut anak-anak Allah.”
 
 </div>
 `,
+
 
 iman: `
 
@@ -1601,6 +1585,7 @@ Dalam keadaan seperti itu, iman mengajarkan kita untuk tetap
 berdiri dan memberikan respons yang benar.
 </p>
 
+
 <h2>
 Berjaga-jagalah
 </h2>
@@ -1611,6 +1596,7 @@ dan tidak hidup tanpa pertimbangan. Orang percaya dipanggil
 untuk tetap sadar terhadap tantangan kehidupan dan menjaga
 kehidupan imannya.
 </p>
+
 
 <h2>
 Berdirilah dalam Iman
@@ -1623,6 +1609,7 @@ masalah, tetapi memilih untuk tetap percaya kepada Tuhan
 di tengah masalah.
 </p>
 
+
 <h2>
 Lakukanlah Segala Sesuatu dalam Kasih
 </h2>
@@ -1632,6 +1619,7 @@ Kekuatan iman tidak hanya terlihat dari keberanian,
 tetapi juga dari cara kita memperlakukan orang lain.
 Karena itu, Paulus menghubungkan iman dengan kasih.
 </p>
+
 
 <div class="quote-box">
 
@@ -1644,6 +1632,7 @@ Lakukanlah segala pekerjaanmu dalam kasih.”
 
 </div>
 `,
+
 
 ekoteologi: `
 
@@ -1675,6 +1664,7 @@ Air, tanah, laut, hutan, hewan dan tumbuhan merupakan bagian
 dari ciptaan Tuhan yang perlu dijaga.
 </p>
 
+
 <h2>
 Manusia sebagai Penatalayan
 </h2>
@@ -1684,6 +1674,7 @@ Kejadian 2:15 menggambarkan manusia ditempatkan di taman Eden
 untuk mengusahakan dan memeliharanya. Prinsip ini dapat menjadi
 dasar bagi tanggung jawab manusia dalam menjaga lingkungan.
 </p>
+
 
 <h2>
 Iman yang Peduli Lingkungan
@@ -1695,6 +1686,7 @@ mengurangi sampah, menjaga kebersihan, menanam pohon,
 menghemat air dan menggunakan sumber daya secara bertanggung jawab.
 </p>
 
+
 <h2>
 Dari Gereja kepada Masyarakat
 </h2>
@@ -1704,6 +1696,7 @@ Gereja dan komunitas keagamaan dapat mengambil bagian dalam
 edukasi lingkungan melalui kegiatan penghijauan, kerja bakti,
 pengelolaan sampah dan pendidikan lingkungan bagi generasi muda.
 </p>
+
 
 <div class="quote-box">
 
@@ -1715,6 +1708,7 @@ dalam taman Eden untuk mengusahakan dan memelihara taman itu.”
 
 </div>
 `,
+
 
 digital: `
 
@@ -1746,6 +1740,7 @@ Karena itu, penggunaan media digital perlu disertai dengan
 tanggung jawab dan etika.
 </p>
 
+
 <h2>
 Berpikir Sebelum Membagikan
 </h2>
@@ -1755,6 +1750,7 @@ Tidak semua informasi yang kita terima benar.
 Sebelum membagikan sebuah berita, periksa sumber,
 tanggal, konteks dan kebenaran informasinya.
 </p>
+
 
 <h2>
 Hindari Ujaran yang Melukai
@@ -1766,23 +1762,35 @@ Gunakan bahasa yang sopan dan hindari penghinaan,
 provokasi serta penyebaran kebencian.
 </p>
 
+
 <h2>
 Gunakan Media Sosial untuk Kebaikan
 </h2>
 
 <ul>
 
-<li>Bagikan informasi yang bermanfaat.</li>
+<li>
+Bagikan informasi yang bermanfaat.
+</li>
 
-<li>Sebarkan pesan perdamaian.</li>
+<li>
+Sebarkan pesan perdamaian.
+</li>
 
-<li>Bagikan kegiatan sosial yang positif.</li>
+<li>
+Bagikan kegiatan sosial yang positif.
+</li>
 
-<li>Gunakan media digital untuk pendidikan.</li>
+<li>
+Gunakan media digital untuk pendidikan.
+</li>
 
-<li>Hormati privasi orang lain.</li>
+<li>
+Hormati privasi orang lain.
+</li>
 
 </ul>
+
 
 <div class="quote-box">
 
@@ -1800,16 +1808,15 @@ jangan hambar.”
 
 
 /* =========================
-   BUKA ARTIKEL
+   MEMBUKA ARTIKEL
 ========================= */
 
 function openArticle(name){
 
-const content =
-articles[name];
+const content = articles[name];
 
 if(!content){
-return;
+    return;
 }
 
 document
@@ -1839,14 +1846,14 @@ document
 document
 .getElementById("artikelView")
 .scrollIntoView({
-behavior:"smooth"
+    behavior:"smooth"
 });
 
 }
 
 
 /* =========================
-   TUTUP ARTIKEL
+   MENUTUP ARTIKEL
 ========================= */
 
 function closeArticle(){
@@ -1874,7 +1881,7 @@ document
 document
 .getElementById("materi")
 .scrollIntoView({
-behavior:"smooth"
+    behavior:"smooth"
 });
 
 }
@@ -1902,9 +1909,7 @@ document
 
 
 /*
-=====================================
-NOMOR WHATSAPP
-=====================================
+GANTI NOMOR WHATSAPP DI SINI
 */
 
 const nomorWhatsApp =
@@ -1936,5 +1941,7 @@ url,
 
 </script>
 
+
 </body>
+
 </html>
