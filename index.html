@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Media Penyuluhan Agama Kristen - materi, renungan, kerukunan dan konsultasi.">
+<title>Media Penyuluhan Agama | Brooggie</title>
+<style>
+:root{--primary:#7b3f00;--secondary:#f4b942;--dark:#1f2937;--light:#fffaf2;--card:#fff;--muted:#6b7280}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--light);color:var(--dark);line-height:1.6}
+header{background:linear-gradient(135deg,#5b2c06,#a85d16);color:#fff;padding:22px 6%;position:sticky;top:0;z-index:10}
+nav{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1150px;margin:auto}
+.logo{font-weight:800;font-size:1.2rem}.navlinks{display:flex;gap:18px;flex-wrap:wrap}.navlinks a{color:#fff;text-decoration:none;font-size:.95rem}
+.hero{max-width:1150px;margin:auto;padding:80px 6% 65px;display:grid;grid-template-columns:1.3fr .7fr;gap:35px;align-items:center}
+.badge{display:inline-block;background:#ffe4a8;color:#6b3608;padding:6px 12px;border-radius:99px;font-weight:700;font-size:.85rem}
+h1{font-size:clamp(2.1rem,5vw,4rem);line-height:1.1;margin:16px 0}.hero p{font-size:1.1rem;color:#4b5563}
+.btn{display:inline-block;background:var(--primary);color:white;padding:12px 20px;border-radius:10px;text-decoration:none;border:0;cursor:pointer;font-weight:700;margin:6px 5px 0 0}
+.btn.alt{background:#fff;border:2px solid var(--primary);color:var(--primary)}
+.verse{background:#fff;border-left:5px solid var(--secondary);padding:24px;border-radius:14px;box-shadow:0 10px 30px #5b2c0615}
+section{max-width:1150px;margin:auto;padding:55px 6%}h2{text-align:center;font-size:2rem;margin-top:0}.intro{text-align:center;max-width:700px;margin:-20px auto 30px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:var(--card);padding:24px;border-radius:16px;box-shadow:0 8px 24px #0000000d;border:1px solid #eadfce}.card h3{margin-top:0;color:var(--primary)}.tag{display:inline-block;font-size:.75rem;background:#f9e8c8;padding:4px 8px;border-radius:6px;margin-bottom:8px}
+.search{display:flex;gap:10px;max-width:700px;margin:0 auto 25px}.search input{flex:1;padding:13px;border:1px solid #d6c8b4;border-radius:10px;font-size:1rem}
+.form{max-width:700px;margin:auto;background:#fff;padding:25px;border-radius:16px;box-shadow:0 8px 24px #0000000d}.form input,.form textarea{width:100%;padding:12px;margin:7px 0 15px;border:1px solid #d6c8b4;border-radius:9px;font:inherit}.form textarea{min-height:130px}
+footer{background:#241507;color:#fff;text-align:center;padding:30px 6%;margin-top:30px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:50px}.grid{grid-template-columns:1fr}.navlinks{display:none}}
+</style>
+</head>
+<body>
+<header><nav><div class="logo">📖 Media Penyuluhan Agama</div><div class="navlinks">
+<a href="#beranda">Beranda</a><a href="#materi">Materi</a><a href="#renungan">Renungan</a><a href="#konsultasi">Konsultasi</a>
+</div></nav></header>
+
+<main>
+<section class="hero" id="beranda">
+<div>
+<span class="badge">Penyuluh Agama Kristen • Kota Tual</span>
+<h1>Media Digital Penyuluhan Agama</h1>
+<p>Ruang sederhana untuk belajar Firman Tuhan, membangun keluarga, menjaga kerukunan, dan menghadirkan nilai-nilai agama di tengah kehidupan masyarakat.</p>
+<a class="btn" href="#materi">Jelajahi Materi</a>
+<a class="btn alt" href="#konsultasi">Kirim Pertanyaan</a>
+</div>
+<div class="verse"><strong>Firman hari ini</strong><p>“Hendaklah kamu saling mengasihi, sama seperti Aku telah mengasihi kamu.”</p><small>Yohanes 15:12</small></div>
+</section>
+
+<section id="materi">
+<h2>Materi Penyuluhan</h2><p class="intro">Materi dapat dikembangkan menjadi artikel, PDF, video, atau bahan presentasi.</p>
+<div class="search"><input id="search" placeholder="Cari materi, misalnya: kerukunan, keluarga, pemuda..."></div>
+<div class="grid" id="cards">
+<article class="card" data-key="kerukunan toleransi damai"><span class="tag">Kerukunan</span><h3>Merawat Kerukunan Umat Beragama</h3><p>Membangun komunikasi, saling menghormati, dan menyelesaikan perbedaan secara damai.</p></article>
+<article class="card" data-key="keluarga kristen parenting"><span class="tag">Keluarga</span><h3>Keluarga Kristen yang Bertumbuh</h3><p>Nilai kasih, tanggung jawab, komunikasi, dan keteladanan dalam kehidupan keluarga.</p></article>
+<article class="card" data-key="pemuda remaja ews konflik"><span class="tag">Pemuda</span><h3>Pemuda dan Sistem Peringatan Dini</h3><p>Mengenali tanda-tanda konflik sosial berdimensi keagamaan dan membangun respons yang damai.</p></article>
+<article class="card" data-key="firman iman badai"><span class="tag">Renungan</span><h3>Tetap Berdiri dalam Iman</h3><p>Belajar menghadapi tekanan hidup dengan iman, keberanian, kekuatan, dan kasih.</p></article>
+<article class="card" data-key="ekoteologi lingkungan ciptaan"><span class="tag">Ekoteologi</span><h3>Iman dan Kepedulian Lingkungan</h3><p>Menempatkan kepedulian terhadap ciptaan sebagai bagian dari tanggung jawab iman.</p></article>
+<article class="card" data-key="media sosial digital etika"><span class="tag">Literasi Digital</span><h3>Etika Bermedia Sosial</h3><p>Menggunakan media digital untuk menyebarkan informasi yang benar, membangun, dan penuh kasih.</p></article>
+</div>
+</section>
+
+<section id="renungan">
+<h2>Renungan Singkat</h2>
+<div class="verse"><h3>Respon yang Membangun</h3><p>Dalam kehidupan, kita tidak selalu dapat mengatur apa yang terjadi, tetapi kita dapat belajar mengatur respons kita. Iman mendorong kita untuk tidak membalas keburukan dengan keburukan, melainkan menghadirkan kasih, pengampunan, dan tindakan yang membangun.</p><strong>“Lakukanlah segala pekerjaanmu dalam kasih.” — 1 Korintus 16:14</strong></div>
+</section>
+
+<section id="konsultasi">
+<h2>Konsultasi / Pertanyaan</h2><p class="intro">Form ini menyiapkan pesan. Untuk menerima pesan secara online, hubungkan dengan Google Forms, Formspree, atau layanan formulir lainnya.</p>
+<form class="form" onsubmit="sendQuestion(event)">
+<label>Nama</label><input id="nama" required>
+<label>Pertanyaan</label><textarea id="pertanyaan" required></textarea>
+<button class="btn" type="submit">Kirim melalui WhatsApp</button>
+</form>
+</section>
+</main>
+
+<footer>
+<strong>Media Penyuluhan Agama Kristen Brooggie</strong><br>
+Penyuluh Agama Kristen • Kementerian Agama Kota Tual<br><br>
+© <span id="year"></span> Brooggie
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('search').addEventListener('input',function(){
+ const q=this.value.toLowerCase();
+ document.querySelectorAll('#cards .card').forEach(c=>c.style.display=c.innerText.toLowerCase().includes(q)||c.dataset.key.includes(q)?'block':'none');
+});
+function sendQuestion(e){
+ e.preventDefault();
+ const nama=document.getElementById('nama').value;
+ const p=document.getElementById('pertanyaan').value;
+ const msg=encodeURIComponent(`Shalom, saya ${nama}. Saya ingin bertanya melalui Media Penyuluhan Agama:%0A%0A${p}`);
+ // GANTI 628xxxxxxxxxx dengan nomor WhatsApp Anda
+ window.open('https://wa.me/628xxxxxxxxxx?text='+msg,'_blank');
+}
+</script>
+</body>
+</html>
