@@ -9,6 +9,7 @@
     <meta name="description" content="Media Digital Penyuluhan Agama Kristen Brooggie - Penyuluh Agama Kristen Kementerian Agama Kota Tual">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -37,6 +38,7 @@
             --border: #eadfce;
             --shadow: 0 8px 25px rgba(91, 44, 6, 0.10);
         }
+
 
         /* =========================
            NAVBAR
@@ -91,6 +93,7 @@
             color: var(--secondary);
         }
 
+
         /* =========================
            HEADER FOTO
         ========================= */
@@ -106,14 +109,9 @@
             width: 100%;
             height: auto;
             display: block;
-
-            /*
-            PENTING:
-            Tidak menggunakan object-fit: cover
-            sehingga foto tidak dipotong.
-            */
             object-fit: contain;
         }
+
 
         /* =========================
            CONTAINER
@@ -124,6 +122,7 @@
             max-width: 1150px;
             margin: auto;
         }
+
 
         /* =========================
            HERO
@@ -223,6 +222,7 @@
             color: var(--primary);
         }
 
+
         /* =========================
            SECTION
         ========================= */
@@ -250,6 +250,7 @@
             color: var(--muted);
         }
 
+
         /* =========================
            SEARCH
         ========================= */
@@ -273,6 +274,7 @@
             border-color: var(--secondary);
             box-shadow: 0 0 0 3px rgba(244,185,66,.15);
         }
+
 
         /* =========================
            MATERI CARD
@@ -335,6 +337,7 @@
             color: var(--primary-dark);
         }
 
+
         /* =========================
            RENUNGAN
         ========================= */
@@ -358,6 +361,95 @@
             margin: auto;
             font-size: 18px;
         }
+
+
+        /* =========================
+           INSTAGRAM
+        ========================= */
+
+        .instagram-section {
+            background: #fffaf2;
+        }
+
+        .instagram-box {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .instagram-icon {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .instagram-box h3 {
+            color: var(--primary-dark);
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .instagram-box p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .instagram-profile {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 13px 24px;
+            border-radius: 9px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .3s;
+            margin-bottom: 35px;
+        }
+
+        .instagram-profile:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .instagram-posts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .instagram-post-card {
+            background: #fffaf2;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 25px 15px;
+        }
+
+        .instagram-post-card .post-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .instagram-post-card h4 {
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .instagram-post-card p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .instagram-post-card a {
+            color: var(--primary);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
 
         /* =========================
            PROFIL
@@ -402,6 +494,7 @@
         .profile-highlight ul {
             padding-left: 20px;
         }
+
 
         /* =========================
            KONSULTASI
@@ -451,6 +544,7 @@
         .form-group textarea:focus {
             border-color: var(--secondary);
         }
+
 
         /* =========================
            ARTIKEL
@@ -516,6 +610,7 @@
             margin-bottom: 25px;
         }
 
+
         /* =========================
            FOOTER
         ========================= */
@@ -535,6 +630,7 @@
             color: #e7d8c7;
             font-size: 13px;
         }
+
 
         /* =========================
            MOBILE
@@ -566,10 +662,15 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .instagram-posts {
+                grid-template-columns: 1fr;
+            }
+
             .hero h1 {
                 font-size: 40px;
             }
         }
+
 
         @media (max-width: 600px) {
 
@@ -612,17 +713,26 @@
             .renungan-box {
                 padding: 30px 20px;
             }
+
+            .instagram-box {
+                padding: 25px 18px;
+            }
+
         }
+
     </style>
 </head>
 
+
 <body>
+
 
 <!-- =========================
      NAVBAR
 ========================= -->
 
 <header>
+
     <div class="nav-container">
 
         <a href="#beranda" class="logo">
@@ -630,16 +740,51 @@
         </a>
 
         <nav>
+
             <ul class="nav-menu">
-                <li><a href="#beranda">Beranda</a></li>
-                <li><a href="#materi">Materi</a></li>
-                <li><a href="#renungan">Renungan</a></li>
-                <li><a href="#profil">Profil</a></li>
-                <li><a href="#konsultasi">Konsultasi</a></li>
+
+                <li>
+                    <a href="#beranda">
+                        Beranda
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#materi">
+                        Materi
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#renungan">
+                        Renungan
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#instagram">
+                        Instagram
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#profil">
+                        Profil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#konsultasi">
+                        Konsultasi
+                    </a>
+                </li>
+
             </ul>
+
         </nav>
 
     </div>
+
 </header>
 
 
@@ -647,19 +792,18 @@
      HEADER FOTO
 ========================= -->
 
-  <div class="site-header-image">
+<div class="site-header-image">
+
     <img
         src="header.png"
         alt="Media Penyuluhan Agama Kristen Brooggie"
     >
 
 </div>
-    >
-
-</div>
 
 
 <main>
+
 
 <!-- =========================
      BERANDA
@@ -690,11 +834,17 @@
 
                 <div class="hero-buttons">
 
-                    <a href="#materi" class="btn btn-primary">
+                    <a
+                        href="#materi"
+                        class="btn btn-primary"
+                    >
                         Lihat Materi
                     </a>
 
-                    <a href="#konsultasi" class="btn btn-secondary">
+                    <a
+                        href="#konsultasi"
+                        class="btn btn-secondary"
+                    >
                         Konsultasi
                     </a>
 
@@ -706,8 +856,11 @@
             <div class="verse-card">
 
                 <div class="verse">
-                    “Inilah perintah-Ku, yaitu supaya kamu saling mengasihi,
-                    seperti Aku telah mengasihi kamu.”
+
+                    “Inilah perintah-Ku, yaitu supaya kamu
+                    saling mengasihi, seperti Aku telah
+                    mengasihi kamu.”
+
                 </div>
 
                 <div class="reference">
@@ -733,7 +886,9 @@
 
         <div class="section-title">
 
-            <h2>Materi Penyuluhan</h2>
+            <h2>
+                Materi Penyuluhan
+            </h2>
 
             <p>
                 Temukan materi yang sesuai dengan kebutuhan Anda.
@@ -761,7 +916,9 @@
 
             <article class="materi-card">
 
-                <div class="materi-icon">🤝</div>
+                <div class="materi-icon">
+                    🤝
+                </div>
 
                 <div class="kategori">
                     Kerukunan
@@ -791,7 +948,9 @@
 
             <article class="materi-card">
 
-                <div class="materi-icon">👨‍👩‍👧‍👦</div>
+                <div class="materi-icon">
+                    👨‍👩‍👧‍👦
+                </div>
 
                 <div class="kategori">
                     Keluarga
@@ -821,7 +980,9 @@
 
             <article class="materi-card">
 
-                <div class="materi-icon">🧑‍🤝‍🧑</div>
+                <div class="materi-icon">
+                    🧑‍🤝‍🧑
+                </div>
 
                 <div class="kategori">
                     Pemuda
@@ -851,7 +1012,9 @@
 
             <article class="materi-card">
 
-                <div class="materi-icon">🙏</div>
+                <div class="materi-icon">
+                    🙏
+                </div>
 
                 <div class="kategori">
                     Renungan
@@ -881,7 +1044,9 @@
 
             <article class="materi-card">
 
-                <div class="materi-icon">🌱</div>
+                <div class="materi-icon">
+                    🌱
+                </div>
 
                 <div class="kategori">
                     Ekoteologi
@@ -911,7 +1076,9 @@
 
             <article class="materi-card">
 
-                <div class="materi-icon">📱</div>
+                <div class="materi-icon">
+                    📱
+                </div>
 
                 <div class="kategori">
                     Literasi Digital
@@ -934,6 +1101,7 @@
                 </a>
 
             </article>
+
 
         </div>
 
@@ -976,6 +1144,154 @@
 
 
 <!-- =========================
+     INSTAGRAM
+========================= -->
+
+<section
+    class="section instagram-section"
+    id="instagram"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Instagram
+            </h2>
+
+            <p>
+                Ikuti informasi, media penyuluhan,
+                renungan, dan kegiatan melalui Instagram.
+            </p>
+
+        </div>
+
+
+        <div class="instagram-box">
+
+            <div class="instagram-icon">
+                📱
+            </div>
+
+            <h3>
+                @bro_oggie
+            </h3>
+
+            <p>
+                Media Penyuluhan Agama Kristen Brooggie
+            </p>
+
+
+            <a
+                href="https://www.instagram.com/bro_oggie/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="instagram-profile"
+            >
+                📷 Buka Instagram
+            </a>
+
+
+            <div class="instagram-posts">
+
+
+                <!-- INSTAGRAM 1 -->
+
+                <div class="instagram-post-card">
+
+                    <div class="post-icon">
+                        🤝
+                    </div>
+
+                    <h4>
+                        Kerukunan Umat Beragama
+                    </h4>
+
+                    <p>
+                        Materi penyuluhan tentang membangun
+                        kerukunan dan kehidupan yang damai
+                        dalam keberagaman.
+                    </p>
+
+                    <a
+                        href="https://www.instagram.com/bro_oggie/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Lihat di Instagram →
+                    </a>
+
+                </div>
+
+
+                <!-- INSTAGRAM 2 -->
+
+                <div class="instagram-post-card">
+
+                    <div class="post-icon">
+                        🙏
+                    </div>
+
+                    <h4>
+                        Renungan Kristen
+                    </h4>
+
+                    <p>
+                        Renungan dan pesan penguatan iman
+                        untuk kehidupan sehari-hari.
+                    </p>
+
+                    <a
+                        href="https://www.instagram.com/bro_oggie/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Lihat di Instagram →
+                    </a>
+
+                </div>
+
+
+                <!-- INSTAGRAM 3 -->
+
+                <div class="instagram-post-card">
+
+                    <div class="post-icon">
+                        🌱
+                    </div>
+
+                    <h4>
+                        Penyuluhan dan Inspirasi
+                    </h4>
+
+                    <p>
+                        Informasi kegiatan, edukasi,
+                        ekoteologi, keluarga, pemuda,
+                        dan literasi digital.
+                    </p>
+
+                    <a
+                        href="https://www.instagram.com/bro_oggie/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Lihat di Instagram →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
      PROFIL
 ========================= -->
 
@@ -985,7 +1301,9 @@
 
         <div class="section-title">
 
-            <h2>Tentang Penyuluh</h2>
+            <h2>
+                Tentang Penyuluh
+            </h2>
 
             <p>
                 Media digital penyuluhan agama Kristen.
@@ -1004,7 +1322,9 @@
                 </h3>
 
                 <p>
-                    <strong>Jorgen Brayn da Costa, S.Th.</strong>
+                    <strong>
+                        Jorgen Brayn da Costa, S.Th.
+                    </strong>
                 </p>
 
                 <p>
@@ -1069,13 +1389,18 @@
      KONSULTASI
 ========================= -->
 
-<section class="section consultation" id="konsultasi">
+<section
+    class="section consultation"
+    id="konsultasi"
+>
 
     <div class="container">
 
         <div class="section-title">
 
-            <h2>Konsultasi Penyuluhan</h2>
+            <h2>
+                Konsultasi Penyuluhan
+            </h2>
 
             <p>
                 Sampaikan pertanyaan atau kebutuhan penyuluhan Anda.
@@ -1179,12 +1504,15 @@
         </p>
 
         <p>
-            Penyuluh Agama Kristen • Kementerian Agama Kota Tual
+            Penyuluh Agama Kristen •
+            Kementerian Agama Kota Tual
         </p>
 
         <p class="footer-small">
+
             © <span id="tahun"></span>
             Media Penyuluhan Agama Kristen Brooggie
+
         </p>
 
     </div>
@@ -1194,12 +1522,14 @@
 
 <script>
 
+
     /* =========================
        TAHUN OTOMATIS
     ========================= */
 
     document.getElementById("tahun").textContent =
         new Date().getFullYear();
+
 
 
     /* =========================
@@ -1224,7 +1554,9 @@
                     sekaligus menghormati keberadaan pemeluk agama lain.
                 </p>
 
-                <h2>1. Kerukunan Dimulai dari Saling Menghormati</h2>
+                <h2>
+                    1. Kerukunan Dimulai dari Saling Menghormati
+                </h2>
 
                 <p>
                     Perbedaan agama merupakan bagian dari kehidupan
@@ -1233,7 +1565,9 @@
                     keyakinan dan hak orang lain.
                 </p>
 
-                <h2>2. Membangun Dialog</h2>
+                <h2>
+                    2. Membangun Dialog
+                </h2>
 
                 <p>
                     Dialog antarumat beragama dapat menjadi ruang untuk
@@ -1241,17 +1575,37 @@
                     kerja sama dalam berbagai bidang kehidupan masyarakat.
                 </p>
 
-                <h2>3. Kerukunan dalam Kehidupan Sehari-hari</h2>
+                <h2>
+                    3. Kerukunan dalam Kehidupan Sehari-hari
+                </h2>
 
                 <ul>
-                    <li>Menghormati ibadah umat lain.</li>
-                    <li>Tidak menyebarkan kebencian berdasarkan agama.</li>
-                    <li>Membangun komunikasi yang baik.</li>
-                    <li>Bekerja sama dalam kegiatan sosial.</li>
-                    <li>Menyelesaikan persoalan melalui dialog.</li>
+
+                    <li>
+                        Menghormati ibadah umat lain.
+                    </li>
+
+                    <li>
+                        Tidak menyebarkan kebencian berdasarkan agama.
+                    </li>
+
+                    <li>
+                        Membangun komunikasi yang baik.
+                    </li>
+
+                    <li>
+                        Bekerja sama dalam kegiatan sosial.
+                    </li>
+
+                    <li>
+                        Menyelesaikan persoalan melalui dialog.
+                    </li>
+
                 </ul>
 
-                <h2>Pesan Penyuluhan</h2>
+                <h2>
+                    Pesan Penyuluhan
+                </h2>
 
                 <p>
                     Kerukunan bukan berarti menghilangkan perbedaan,
@@ -1277,7 +1631,9 @@
                     dan kehidupan bersama.
                 </p>
 
-                <h2>1. Kasih sebagai Dasar</h2>
+                <h2>
+                    1. Kasih sebagai Dasar
+                </h2>
 
                 <p>
                     Kehidupan keluarga Kristen perlu dibangun berdasarkan
@@ -1286,14 +1642,18 @@
                     dan tanggung jawab.
                 </p>
 
-                <h2>2. Komunikasi</h2>
+                <h2>
+                    2. Komunikasi
+                </h2>
 
                 <p>
                     Komunikasi yang terbuka membantu anggota keluarga
                     memahami kebutuhan dan persoalan satu sama lain.
                 </p>
 
-                <h2>3. Keteladanan</h2>
+                <h2>
+                    3. Keteladanan
+                </h2>
 
                 <p>
                     Pendidikan iman dalam keluarga akan lebih kuat apabila
@@ -1301,14 +1661,32 @@
                     tindakan sehari-hari.
                 </p>
 
-                <h2>4. Membangun Kebiasaan Positif</h2>
+                <h2>
+                    4. Membangun Kebiasaan Positif
+                </h2>
 
                 <ul>
-                    <li>Berdoa bersama.</li>
-                    <li>Membaca dan merenungkan firman Tuhan.</li>
-                    <li>Makan bersama.</li>
-                    <li>Saling mendengarkan.</li>
-                    <li>Menyelesaikan konflik dengan kasih.</li>
+
+                    <li>
+                        Berdoa bersama.
+                    </li>
+
+                    <li>
+                        Membaca dan merenungkan firman Tuhan.
+                    </li>
+
+                    <li>
+                        Makan bersama.
+                    </li>
+
+                    <li>
+                        Saling mendengarkan.
+                    </li>
+
+                    <li>
+                        Menyelesaikan konflik dengan kasih.
+                    </li>
+
                 </ul>
 
             `
@@ -1330,7 +1708,9 @@
                     potensi persoalan sebelum berkembang menjadi konflik.
                 </p>
 
-                <h2>1. Mengenali Tanda-Tanda Awal</h2>
+                <h2>
+                    1. Mengenali Tanda-Tanda Awal
+                </h2>
 
                 <p>
                     Perubahan komunikasi, penyebaran informasi provokatif,
@@ -1339,7 +1719,9 @@
                     secara bijaksana.
                 </p>
 
-                <h2>2. Tidak Mudah Terprovokasi</h2>
+                <h2>
+                    2. Tidak Mudah Terprovokasi
+                </h2>
 
                 <p>
                     Pemuda perlu memeriksa informasi sebelum membagikannya,
@@ -1347,17 +1729,37 @@
                     agama, suku, maupun komunitas tertentu.
                 </p>
 
-                <h2>3. Menjadi Pembawa Damai</h2>
+                <h2>
+                    3. Menjadi Pembawa Damai
+                </h2>
 
                 <ul>
-                    <li>Membangun komunikasi positif.</li>
-                    <li>Menghindari penyebaran hoaks.</li>
-                    <li>Menghargai perbedaan.</li>
-                    <li>Melaporkan persoalan kepada pihak yang tepat.</li>
-                    <li>Membangun kegiatan bersama lintas kelompok.</li>
+
+                    <li>
+                        Membangun komunikasi positif.
+                    </li>
+
+                    <li>
+                        Menghindari penyebaran hoaks.
+                    </li>
+
+                    <li>
+                        Menghargai perbedaan.
+                    </li>
+
+                    <li>
+                        Melaporkan persoalan kepada pihak yang tepat.
+                    </li>
+
+                    <li>
+                        Membangun kegiatan bersama lintas kelompok.
+                    </li>
+
                 </ul>
 
-                <h2>Pesan Penyuluhan</h2>
+                <h2>
+                    Pesan Penyuluhan
+                </h2>
 
                 <p>
                     Pemuda bukan hanya pengguna media sosial,
@@ -1384,14 +1786,18 @@
                     maupun persoalan sosial.
                 </p>
 
-                <h2>1. Berjaga-jaga</h2>
+                <h2>
+                    1. Berjaga-jaga
+                </h2>
 
                 <p>
                     1 Korintus 16:13 mengingatkan umat percaya untuk
                     tetap waspada dan tidak kehilangan arah dalam iman.
                 </p>
 
-                <h2>2. Berdiri Teguh dalam Iman</h2>
+                <h2>
+                    2. Berdiri Teguh dalam Iman
+                </h2>
 
                 <p>
                     Iman memberikan dasar bagi seseorang untuk tetap
@@ -1400,7 +1806,9 @@
                     kesulitan, tetapi tetap berpegang kepada Tuhan.
                 </p>
 
-                <h2>3. Melakukan Segala Sesuatu dalam Kasih</h2>
+                <h2>
+                    3. Melakukan Segala Sesuatu dalam Kasih
+                </h2>
 
                 <p>
                     Ayat 14 memberikan penekanan penting:
@@ -1409,7 +1817,9 @@
                     kehidupan orang percaya.
                 </p>
 
-                <h2>Refleksi</h2>
+                <h2>
+                    Refleksi
+                </h2>
 
                 <p>
                     Ketika menghadapi badai kehidupan, jangan hanya
@@ -1438,14 +1848,18 @@
                     dan generasi yang akan datang.
                 </p>
 
-                <h2>1. Manusia sebagai Bagian dari Ciptaan</h2>
+                <h2>
+                    1. Manusia sebagai Bagian dari Ciptaan
+                </h2>
 
                 <p>
                     Perspektif iman Kristen mengajarkan bahwa manusia
                     hidup dalam hubungan dengan seluruh ciptaan Tuhan.
                 </p>
 
-                <h2>2. Merawat Lingkungan</h2>
+                <h2>
+                    2. Merawat Lingkungan
+                </h2>
 
                 <p>
                     Kepedulian terhadap lingkungan dapat diwujudkan
@@ -1453,14 +1867,32 @@
                 </p>
 
                 <ul>
-                    <li>Mengurangi sampah.</li>
-                    <li>Menjaga kebersihan lingkungan.</li>
-                    <li>Menanam dan merawat pohon.</li>
-                    <li>Menghemat air dan energi.</li>
-                    <li>Mengedukasi keluarga dan masyarakat.</li>
+
+                    <li>
+                        Mengurangi sampah.
+                    </li>
+
+                    <li>
+                        Menjaga kebersihan lingkungan.
+                    </li>
+
+                    <li>
+                        Menanam dan merawat pohon.
+                    </li>
+
+                    <li>
+                        Menghemat air dan energi.
+                    </li>
+
+                    <li>
+                        Mengedukasi keluarga dan masyarakat.
+                    </li>
+
                 </ul>
 
-                <h2>Iman yang Berdampak</h2>
+                <h2>
+                    Iman yang Berdampak
+                </h2>
 
                 <p>
                     Kepedulian terhadap lingkungan merupakan salah satu
@@ -1487,7 +1919,9 @@
                     tanggung jawab dan etika.
                 </p>
 
-                <h2>1. Periksa Informasi Sebelum Membagikan</h2>
+                <h2>
+                    1. Periksa Informasi Sebelum Membagikan
+                </h2>
 
                 <p>
                     Jangan langsung membagikan informasi hanya karena
@@ -1495,24 +1929,46 @@
                     Periksa sumber dan kebenarannya terlebih dahulu.
                 </p>
 
-                <h2>2. Hindari Ujaran Kebencian</h2>
+                <h2>
+                    2. Hindari Ujaran Kebencian
+                </h2>
 
                 <p>
                     Perbedaan pendapat tidak boleh menjadi alasan untuk
                     merendahkan atau menyerang orang lain.
                 </p>
 
-                <h2>3. Gunakan Media Sosial untuk Kebaikan</h2>
+                <h2>
+                    3. Gunakan Media Sosial untuk Kebaikan
+                </h2>
 
                 <ul>
-                    <li>Membagikan informasi yang bermanfaat.</li>
-                    <li>Menyebarkan pesan perdamaian.</li>
-                    <li>Menghargai perbedaan.</li>
-                    <li>Menghindari provokasi.</li>
-                    <li>Menjaga privasi orang lain.</li>
+
+                    <li>
+                        Membagikan informasi yang bermanfaat.
+                    </li>
+
+                    <li>
+                        Menyebarkan pesan perdamaian.
+                    </li>
+
+                    <li>
+                        Menghargai perbedaan.
+                    </li>
+
+                    <li>
+                        Menghindari provokasi.
+                    </li>
+
+                    <li>
+                        Menjaga privasi orang lain.
+                    </li>
+
                 </ul>
 
-                <h2>Pesan Penyuluhan</h2>
+                <h2>
+                    Pesan Penyuluhan
+                </h2>
 
                 <p>
                     Jejak digital merupakan bagian dari tanggung jawab
@@ -1537,16 +1993,24 @@
         if (!article) return;
 
         document.getElementById("materi").style.display = "none";
+
         document.getElementById("renungan").style.display = "none";
+
+        document.getElementById("instagram").style.display = "none";
+
         document.getElementById("profil").style.display = "none";
+
         document.getElementById("konsultasi").style.display = "none";
+
         document.getElementById("beranda").style.display = "none";
+
 
         const artikelView =
             document.getElementById("artikelView");
 
         const articleContent =
             document.getElementById("articleContent");
+
 
         articleContent.innerHTML = `
 
@@ -1562,12 +2026,15 @@
 
         `;
 
+
         artikelView.style.display = "block";
+
 
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
+
     }
 
 
@@ -1577,17 +2044,32 @@
 
     function closeArticle() {
 
-        document.getElementById("artikelView").style.display = "none";
+        document.getElementById("artikelView").style.display =
+            "none";
 
-        document.getElementById("beranda").style.display = "block";
-        document.getElementById("materi").style.display = "block";
-        document.getElementById("renungan").style.display = "block";
-        document.getElementById("profil").style.display = "block";
-        document.getElementById("konsultasi").style.display = "block";
+        document.getElementById("beranda").style.display =
+            "block";
+
+        document.getElementById("materi").style.display =
+            "block";
+
+        document.getElementById("renungan").style.display =
+            "block";
+
+        document.getElementById("instagram").style.display =
+            "block";
+
+        document.getElementById("profil").style.display =
+            "block";
+
+        document.getElementById("konsultasi").style.display =
+            "block";
+
 
         document.getElementById("materi").scrollIntoView({
             behavior: "smooth"
         });
+
     }
 
 
@@ -1602,13 +2084,16 @@
             .value
             .toLowerCase();
 
+
         const cards =
             document.querySelectorAll(".materi-card");
+
 
         cards.forEach(function(card) {
 
             const text =
                 card.innerText.toLowerCase();
+
 
             if (text.includes(input)) {
 
@@ -1621,6 +2106,7 @@
             }
 
         });
+
     }
 
 
@@ -1632,11 +2118,17 @@
 
         event.preventDefault();
 
+
         const nama =
-            document.getElementById("nama").value.trim();
+            document.getElementById("nama")
+            .value
+            .trim();
+
 
         const pesan =
-            document.getElementById("pesan").value.trim();
+            document.getElementById("pesan")
+            .value
+            .trim();
 
 
         const nomorWhatsApp =
@@ -1664,6 +2156,7 @@
     }
 
 </script>
+
 
 </body>
 </html>
