@@ -100,20 +100,34 @@ nav{
    FOTO HEADER
 ========================= */
 
-.site-header-image{
-    width:100%;
-    background:#241507;
-    overflow:hidden;
+site-header-image.header-error {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #5b2c06;
 }
 
-.site-header-image img{
-    width:100%;
-    height:auto;
-    max-height:520px;
-    object-fit:cover;
-    object-position:center;
-    display:block;
+.site-header-image.header-error::after {
+    content: "Media Penyuluhan Agama Kristen Brooggie";
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
 }
+
+/* HP */
+@media (max-width: 850px) {
+    .site-header-image img {
+        min-height: 150px;
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header-image img {
+        min-height: 120px;
+        max-height: 300px;
+    }
 
 
 /* =========================
@@ -595,12 +609,11 @@ Konsultasi
 ========================= -->
 
 <div class="site-header-image">
-
-<img
-src="header.png"
-alt="Header Media Penyuluhan Agama Kristen Brooggie"
->
-
+    <img 
+        src="./header.png" 
+        alt="Media Penyuluhan Agama Kristen Brooggie"
+        onerror="this.style.display='none'; this.parentElement.classList.add('header-error');"
+    >
 </div>
 
 
